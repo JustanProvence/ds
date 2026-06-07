@@ -14,6 +14,7 @@ def flet_server():
     # Setup environment
     env = os.environ.copy()
     env["FLET_PORT"] = port
+    env["FLET_FORCE_WEB_SERVER"] = "true"
     env["PYTHONUNBUFFERED"] = "1"
 
     print(f"\n[FIXTURE] Starting Flet server on {url}...")
