@@ -5,7 +5,7 @@ import urllib.request
 import pytest
 
 
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def flet_server():
     """Starts the example.py Flet application on port 8552 for UI testing."""
     port = "8552"
