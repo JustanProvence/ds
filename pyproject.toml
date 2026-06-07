@@ -1,0 +1,26 @@
+[project]
+name = "design-system"
+version = "0.1.0"
+description = "A production-ready, fully token-driven Design System built with Flet and Python"
+authors = [
+    {name = "jprovence",email = "prov@example.com"}
+]
+requires-python = "^3.12"
+dependencies = [
+    "flet[all]==0.85.2"
+]
+
+packages = [
+    {include = "design_system", from = "src"},
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)",
+    "pytest-playwright (>=0.8.0,<0.9.0)",
+    "playwright (>=1.60.0,<2.0.0)"
+]
