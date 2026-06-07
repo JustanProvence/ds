@@ -570,4 +570,6 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=8550)
+    import os
+    port = int(os.environ.get("FLET_PORT", 8550))
+    ft.app(target=main, view=ft.AppView.WEB_BROWSER, port=port)
